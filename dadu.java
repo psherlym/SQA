@@ -22,15 +22,18 @@ return hasil;
 
 public int getJumSisi() {
 return jumSisi;
+k.setColor(Color.RED);
 }
 
 public int getHasil() {
 return hasil;
+k.setColor(Color.BLUE);
 }
 
 @Override
 public String toString() {
 return "Jumlah sisi dadu: " + getJumSisi() + " hasil: " + getHasil();
+k.setColor(Color.GREEN);
 }
 }
 public class main {
