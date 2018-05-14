@@ -1,11 +1,14 @@
 import java.util.Random;
 import java.awt.Color;
 
-public final class Dadu {
+public class Dadu {
 public static final int DEFAULT_SISI = 6;
+
 private static Random randGenerator = new Random();
+
 private final int jumSisi;
 private int hasil;
+private Color warna;
 
 public Dadu() {
 this(DEFAULT_SISI);
@@ -17,29 +20,37 @@ this.jumSisi = numSides;
 
 public int lempar() {
 hasil = randGenerator.nextInt(jumSisi) + 1;
+warna = new Color(randGenerator.nextInt(255), randGenerator.nextInt(255), randGenerator.nextInt(255));
 return hasil;
 }
 
 public int getJumSisi() {
 return jumSisi;
-k.setColor(Color.RED);
+
+//k.setColor(Color.RED);
 }
 
 public int getHasil() {
 return hasil;
-k.setColor(Color.BLUE);
+
+//k.setColor(Color.BLUE);
 }
 
 @Override
 public String toString() {
 return "Jumlah sisi dadu: " + getJumSisi() + " hasil: " + getHasil();
-k.setColor(Color.GREEN);
+
+//k.setColor(Color.GREEN);
 }
+
+public Color getWarnaSisi(){
+    return warna;
 }
-public class main {
+
+
 public static void main(String []args){
 Dadu dadu1 = new Dadu (6);
-dadu1.lempar();
-System.out.println(dadu1.toString);
+//dadu1.lempar();
+System.out.println(dadu1.lempar());
 }
 }
